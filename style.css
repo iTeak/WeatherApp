@@ -1,0 +1,9 @@
+body{
+    background-color: black;
+    color: rgb(167, 206, 239);
+}
+
+.pagewrap{
+    display: flex;
+    margin: 1rem;   
+}
