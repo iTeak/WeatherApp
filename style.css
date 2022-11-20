@@ -12,7 +12,7 @@ body{
   
 }
 .topContainer {
-  width: 1000px
+  width: 100%;
 
 }
 .cardContainer {
@@ -53,5 +53,24 @@ button {
   width: calc(100% - 100px);
   height: 2.5em;
 
+
+}
+.bottomcontainer-grid{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 5em;
+
+}
+
+.day1{  
+  background: #7c7c7c2b;
+  color: white;
+  font-size: 175%;
+  height: 100%;
+  padding: 25px;
+  width: 100%;
+  border-radius: 10px;
+  
 
 }
