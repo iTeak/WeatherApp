@@ -15,12 +15,7 @@ body{
   width: 100%;
 
 }
-.cardContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  background: #222;
-  padding: 60px;
-}
+
 .search {
   display: flex;
   align-items: center;
@@ -66,11 +61,14 @@ button {
 .day1{  
   background: #7c7c7c2b;
   color: white;
-  font-size: 175%;
+  font-size: 125%;
   height: 100%;
   padding: 25px;
   width: 100%;
   border-radius: 10px;
-  
-
 }
+
+button {
+  font-size: 16px;
+}
+
