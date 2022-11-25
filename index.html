@@ -12,7 +12,7 @@
     <div class="pagewrap">
         <div class="topcontainer">
             <div class="maincard">
-               <input  type="text" name="searchweather" id="search-bar" placeholder="Search only by city">
+               <input  type="text" name="searchweather" id="search-bar" placeholder="Search by city">
                <button id="btn"> <svg id="btn" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
                 width="1.5em">
                 <path
@@ -26,13 +26,17 @@
         </div>
 
         <div class="bottomcontainer">
-            <h1> 5 day Forecast </h1>
+            <h1 class=""> 5 day Forecast<h1 class="city"></h1></h1>
             <div class="bottomcontainer-grid">
             <div class="day1">
                 <h1>Day 1</h1>
                 <div class="temp">
-                    <h3>51</h3>
+                    <h3 class="temp"> <span class=""></span> 51</h3>
                 </div>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                    <div class="description">Cloudy</div>
+                  </div>
                 <div class="humid">
                     <h3>51</h3>
                 </div>
