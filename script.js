@@ -39,18 +39,6 @@ button.addEventListener("click", function () {
                
             </div> `
             console.log(BottomGridElm.innerHTML)
-            
-                    // let description = data.weather[i].description;
-                    // const icon = data.weather[0].id;
-                    // const { temp, humidity } = data.main;
-                    // const { speed } = data.wind;
-                    // const lon = data.coord.lon;
-                    // const lat = data.coord.lat;
-
-                  
-
-
-
             }
             var url = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${key}&units=imperial`
 
@@ -70,12 +58,7 @@ button.addEventListener("click", function () {
 
 
             document.querySelector(".city").innerText = name;
-            // document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
-            // document.querySelector(".description").innerText = description;
-            // document.querySelector(".temp").innerText = temp + "°F";
-            // document.querySelector(".humid").innerText = "Humidity: " + humidity + "%";
-            // document.querySelector(".wind").innerText = "Wind speed: " + speed + " mph";
-            // console.log(data.coord)
+          
             console.log(data)
         })
 })
