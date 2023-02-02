@@ -9,8 +9,6 @@ let BottomGridElm = document.querySelector('.bottomcontainer-grid')
 // let dayElm = document.createElement('h1')
 let current = document.querySelector('#currentinfo')
 let five = document.getElementsByClassName("hide")
-
-
 console.log(inputvalue.value)
 
 button.addEventListener("click", function () {
@@ -20,6 +18,8 @@ button.addEventListener("click", function () {
         .then((data) => {
             const name = data.city.name;
             
+
+            BottomGridElm.innerHTML = ``;
             for (var i = 3; i < data.list.length; i= i + 8) {
                 BottomGridElm.innerHTML += ` <div class= "card">
                 <h1 id="day">${dayjs(data.list[i].dt_txt).format('MM/DD/YYYY')}</h1>
@@ -31,10 +31,10 @@ button.addEventListener("click", function () {
                     <div class="description">Cloudy</div>
                 </div>
                 <div class="humid">
-                    <h3>${data.list[i].main.humidity} % </h3>
+                    <h3>Humidity ${data.list[i].main.humidity} % </h3>
                 </div>
                 <div class="wind">
-                    <h3>${data.list[i].wind.speed}MPH</h3>
+                    <h3> Wind ${data.list[i].wind.speed}MPH</h3>
                 </div>
                
             </div> `
@@ -54,16 +54,21 @@ button.addEventListener("click", function () {
                 <h1>${currentdata.main.humidity} % </h1>
                 </div>
                 `
+                var array = []
+                if(localStorage.getItem("weathercities")) {
+                    array = JSON.parse(localStorage.getItem("weathercities"));
+                }
+
+                array.push(inputvalue.value)
+                localStorage.setItem("weathercities", JSON.stringify(array))
             })
-
-
             document.querySelector(".city").innerText = name;
-          
             console.log(data)
         })
 })
 
-
+//create list of local store cities
+//each list item is "clickable" and will copy the text in a search area 
 
 
 
